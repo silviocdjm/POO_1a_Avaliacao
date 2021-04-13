@@ -1,4 +1,3 @@
-//Espaço para implementação das novas versões.
 //i. uma classe que represente uma cor RGB
 public class CoresRGB
 {
@@ -104,7 +103,15 @@ public class CoresRGB
         green = green.toUpperCase();
         String blue = Integer.toHexString(this.getLuminosidade());
         blue = blue.toUpperCase();
-        
+        if(red.equals("0")){
+            red = "00";
+        }
+        if(green.equals("0")){
+            green = "00";
+        }
+        if(blue.equals("0")){
+            blue = "00";
+        }
         return ("#" + red + green + blue);
     }
     //xii. um método que gere uma representação String da cor como hexadecimal. A representação é composta pelo caracter # seguida de dois dígitos representando o valor de R, G e B em hexadecimal. Por exemplo, para a cor RGB, onde R=37, G=150, B=190, o método deve retornar: #2596BE
@@ -115,13 +122,13 @@ public class CoresRGB
         green = green.toUpperCase();
         String blue = Integer.toHexString(this.getBlue());
         blue = blue.toUpperCase();
-        if(red == "0"){
+        if(red.equals("0")){
             red = "00";
         }
-        if(green == "0"){
+        if(green.equals("0")){
             green = "00";
         }
-        if(blue == "0"){
+        if(blue.equals("0")){
             blue = "00";
         }
         return ("#" + red + green + blue);
