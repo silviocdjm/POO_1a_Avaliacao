@@ -96,24 +96,14 @@ public class CoresRGB
     //Para atender a este item, todos os métodos "set" foram transformados de "public" para "private".
     
     //xi. um método que gere e retorne uma nova cor RGB equivalente ao cinza da cor RGB em questão. Essa cor possui os valores de R, G e B iguais entre si e iguais ao valor da luminosidade da cor original. Por exemplo, para a cor #2596BE, a cor gerada deverá ser #797979.
-    public String cinza(){
-        String red = Integer.toHexString(this.getLuminosidade());
-        red = red.toUpperCase();
-        String green = Integer.toHexString(this.getLuminosidade());
-        green = green.toUpperCase();
-        String blue = Integer.toHexString(this.getLuminosidade());
-        blue = blue.toUpperCase();
-        if(red.equals("0")){
-            red = "00";
-        }
-        if(green.equals("0")){
-            green = "00";
-        }
-        if(blue.equals("0")){
-            blue = "00";
-        }
-        return ("#" + red + green + blue);
+    public CoresRGB novaInstanciaCinza(CoresRGB cores){
+        int red = cores.getLuminosidade();
+        int green = cores.getLuminosidade();
+        int blue = cores.getLuminosidade();          
+        CoresRGB coresCinza = new CoresRGB(red, green, blue);
+        return coresCinza;
     }
+       
     //xii. um método que gere uma representação String da cor como hexadecimal. A representação é composta pelo caracter # seguida de dois dígitos representando o valor de R, G e B em hexadecimal. Por exemplo, para a cor RGB, onde R=37, G=150, B=190, o método deve retornar: #2596BE
     public String hexadecimal(){
         String red = Integer.toHexString(this.getRed());
@@ -157,6 +147,5 @@ public class CoresRGB
         System.out.println("Blue: " + this.getBlue());
         System.out.println("Luminosidade: " + this.getLuminosidade());
         System.out.println("Hexadecimal: " + this.hexadecimal());
-        System.out.println("Cinza: " + this.cinza());
     }
 }
