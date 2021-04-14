@@ -1,6 +1,7 @@
 class Main {
     public static void main(String[] args) {
-        
+        System.out.println("################# Teste CoresRGB #################");        
+    
         System.out.println("__________________________________________________");
         System.out.println("Cor original");
         CoresRGB cor1 = new CoresRGB(37, 150, 190);
@@ -10,6 +11,11 @@ class Main {
         System.out.println("Cópia da cor original");
         CoresRGB corCopia = new CoresRGB(cor1);
         corCopia.imprimir();
+        
+        System.out.println("__________________________________________________");
+        System.out.println("Segunda cópia da cor original");
+        CoresRGB corCopia2 = new CoresRGB(cor1);
+        corCopia2.imprimir();
         
         System.out.println("__________________________________________________");
         System.out.println("Cor preta");
@@ -73,9 +79,20 @@ class Main {
         System.out.println("Criando uma cor BLUE");        
         CoresRGB corBLUE = CoresRGB.BLUE;
         corBLUE.imprimir();
-        
+
+        System.out.println("__________________________________________________");
+        System.out.println("Criando uma cor em equivalente cinza");        
+        CoresRGB corCinza = corCopia2.novaInstanciaCinza(corCopia2);
+        corCinza.imprimir();
         
         System.out.println("#################### Fim teste ####################");        
+        System.out.println(" ");
+        System.out.println("################## Teste Imagem ###################");        
+        
+        System.out.println("__________________________________________________");
+        System.out.println("Criando uma Imagem BRANCA");        
+        Imagem imagem1 = new Imagem(5, 3);//new Imagem(altura, largura)
+        imagem1.mostrarImagem();        
     }
 }
 
