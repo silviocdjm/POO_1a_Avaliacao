@@ -2,8 +2,8 @@ public class Imagem
 {
     //i. a representação estática da classe criada
     private CoresRGB[][] imagem;
-    CoresRGB pixel = new CoresRGB();
-    
+    public static final CoresRGB PIXEL = new CoresRGB(171,171,171);
+
     //ii. um construtor que crie uma Imagem. O tamanho da Imagem será passado como parâmetro no construtor. A imagem criada deve ter todos os píxels ajustados para o BRANCO
     public Imagem(int altura, int largura){
         this.imagem = new CoresRGB[altura][largura];
@@ -14,16 +14,16 @@ public class Imagem
             }
         }
     }
+    
     //iii. um método que modifique o pixel de uma imagem dada a posição e o pixel
-    private void modificarPixel(int linha, int coluna, CoresRGB pixel){
-        
+    public void modificarPixel(int linha, int coluna, CoresRGB pixel){
+        this.imagem[linha][coluna] = Imagem.PIXEL;
     }
-
+    
+    //iv. sobrecarregue este método para modifique o pixel de uma imagem dada a posição e os valores de RGB do pixel.     
     private void modificarPixel(int linha, int coluna, int red, int green, int blue){
  
     }
-    
-    
     //Mostrar a imagem
     public void mostrarImagem(){
         int i, j;
@@ -34,4 +34,14 @@ public class Imagem
             System.out.println("");
         }
     }
+    
+    /*public CoresRGB getPixel() {
+        return pixel;
+    }
+
+    public void setPixel(CoresRGB pixel) {
+        this.pixel = pixel;
+    }
+    
+    */
 }
