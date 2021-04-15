@@ -92,7 +92,13 @@ class Main {
         System.out.println("__________________________________________________");
         System.out.println("Criando uma Imagem BRANCA");        
         Imagem imagem1 = new Imagem(5, 3);//new Imagem(altura, largura)
-        imagem1.mostrarImagem();        
+        imagem1.mostrarImagem();
+        
+        System.out.println("__________________________________________________");
+        System.out.println("Modificando o PIXEL de uma imagem ");        
+        Imagem corPixel = new Imagem(5, 3);
+        corPixel.modificarPixel(0, 1, Imagem.PIXEL); //(linha, coluna,pixel)
+        corPixel.mostrarImagem();
     }
 }
 
