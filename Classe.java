@@ -95,10 +95,15 @@ class Main {
         imagem1.mostrarImagem();
         
         System.out.println("__________________________________________________");
-        System.out.println("Modificando o PIXEL de uma imagem ");        
-        Imagem corPixel = new Imagem(5, 3);
-        corPixel.modificarPixel(0, 1, Imagem.PIXEL); //(linha, coluna,pixel)
-        corPixel.mostrarImagem();
+        System.out.println("Modificando pixels da Imagem, dado o pixel");
+        CoresRGB pixel1 = new CoresRGB(37, 150, 190);
+        imagem1.modificarPixel(0, 0, pixel1);
+        imagem1.modificarPixel(0, 1, pixel1);
+        imagem1.modificarPixel(0, 2, pixel1);
+        imagem1.modificarPixel(1, 0, pixel1);
+        imagem1.modificarPixel(1, 1, pixel1);
+        imagem1.modificarPixel(1, 2, pixel1);
+        imagem1.mostrarImagem();
     }
 }
 
