@@ -21,6 +21,32 @@ public class Imagem
         CoresRGB pixel2 = new CoresRGB(red, green, blue);
         this.pixel[linha][coluna] = pixel2;
     }
+    //v. método que verifique que duas imagens são iguais
+    public boolean compararImagens(Imagem imagem){
+        //Verificando se as dimensões das figuras são idênticas.
+        int tamanho = 0;
+        if((this.pixel.length == imagem.pixel.length) && (this.pixel[0].length == imagem.pixel[0].length)){
+            tamanho = 1;
+        }else{
+            return false;
+        }
+        //Comparando cada pixel das imagens informadas pelo usuário.
+        int i, j;
+        int area = this.pixel.length * this.pixel[0].length;        
+        int areaCalculada = 0;        
+        for(i = 0; i < this.pixel.length; i++){
+            for(j = 0; j < this.pixel[0].length; j++){
+                if(imagem.pixel[i][j].equals(this.pixel[i][j])){
+                    areaCalculada = areaCalculada + 1;
+                }
+            }          
+        }
+        if(area == areaCalculada && tamanho == 1){
+            return true;
+        }else{
+            return false;
+        }        
+    }
     //Mostrar a imagem
     public void mostrarImagem(){
         int i, j;
