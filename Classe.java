@@ -104,6 +104,16 @@ class Main {
         imagem1.modificarPixel(1, 1, pixel1);
         imagem1.modificarPixel(1, 2, pixel1);
         imagem1.mostrarImagem();
+        
+        System.out.println("__________________________________________________");
+        System.out.println("Modificando pixels da Imagem, dados os valores RGB");
+        imagem1.modificarPixel(2, 0, 37, 150, 190);
+        imagem1.modificarPixel(2, 1, 37, 150, 190);
+        imagem1.modificarPixel(2, 2, 37, 150, 190);
+        imagem1.modificarPixel(3, 0, 37, 150, 190);
+        imagem1.modificarPixel(3, 1, 37, 150, 190);
+        imagem1.modificarPixel(3, 2, 37, 150, 190);
+        imagem1.mostrarImagem();
     }
 }
 
