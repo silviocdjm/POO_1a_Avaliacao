@@ -18,7 +18,8 @@ public class Imagem
     }
     //iv. sobrecarregue este método para modifique o pixel de uma imagem dada a posição e os valores de RGB do pixel.     
     private void modificarPixel(int linha, int coluna, int red, int green, int blue){
- 
+        CoresRGB pixel2 = new CoresRGB(red, green, blue);
+        this.pixel[linha][coluna] = pixel2;
     }
     //Mostrar a imagem
     public void mostrarImagem(){
